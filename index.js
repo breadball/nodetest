@@ -41,7 +41,7 @@ app.get('/thatday', auth, (req, res) => {
   console.log(req.query);
   request('https://cbr.ru/scripts/XML_daily.asp', req.query, (err, response, body)=>{
     if(err) return res.status(500).send({message: err})
-    console.log(body).jsonEncode;
+    console.log(body);
     return res.send(body)
   });
 });
