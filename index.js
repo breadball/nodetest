@@ -47,7 +47,7 @@ app.get('/thatday', auth, (req, res) => {
 });
 
 
-app.get('/thatday', auth, (req, res) => {
+app.get('*', (req, res) => {
     res.send({ message: 'API не найден!' });
 });
 
